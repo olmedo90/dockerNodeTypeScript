@@ -1,0 +1,14 @@
+{
+  "name": "dockernodetypescript",
+  "version": "1.0.0",
+  "description": "docker nodejs typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/src/server.js",
+    "dev":"nodemon --config nodemon.json src/server.ts",
+    "dev:debug": "nodemon --config nodemon.json"
+  },
+  "author": "edson olmedo",
+  "license": "ISC"
+}
