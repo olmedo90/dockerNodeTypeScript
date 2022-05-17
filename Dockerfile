@@ -8,4 +8,4 @@ ADD . .
 RUN npm install
 EXPOSE 8000
 RUN npm run build
-CMD ["nodemon", "dist/server.js"]
+CMD ["npm", "run", "dev"]

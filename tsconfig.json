@@ -10,7 +10,7 @@
       ]
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
-    "outFile": "/dist",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
+    "outDir": "dist/",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
     "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
     "strict": true,                                      /* Enable all strict type-checking options. */
@@ -19,5 +19,8 @@
   },
   "include":[
     "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
