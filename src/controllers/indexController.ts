@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 
 class IndexController {
     public index (req:Request, res : Response){
-        res.send('hola mundo desde rutas')
+        res.json({ "nombre":'edson olmedo'})
     }
 }
 export const indexController =  new IndexController()
