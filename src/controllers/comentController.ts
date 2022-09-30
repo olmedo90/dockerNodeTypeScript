@@ -20,7 +20,7 @@ class ComentController {
         try {
             const comentariosDB = new comentModel(body);
             await comentariosDB.save();
-            res.send('se inserto correctamente')
+            res.json('se inserto correctamente')
         } catch (error) {
             console.log(error);
         }
@@ -33,10 +33,12 @@ class ComentController {
             const comentarioDB = await comentModel.findByIdAndDelete({_id:id});
             if(comentarioDB){
                 
-                res.send('eliminado correctamente') 
+                res.json({
+                    estado:true
+                }) 
 
             }else{
-                res.send('error al eliminar coment');
+                res.json('error al eliminar coment');
             }
         }catch (error) {
             console.log(error);
@@ -50,10 +52,10 @@ class ComentController {
         
             const comentarioDB= await comentModel.findByIdAndUpdate(id, body);
             if(comentarioDB){
-            res.send('el comentario se edito exitosamente');
+            res.json('el comentario se edito exitosamente');
 
             }else{
-                res.send('error al editar comentario');
+                res.json('error al editar comentario');
             }
 
         } catch (error) {
